@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+                url('Imagens/fundo.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1, p {
+    animation: fadeIn 1.4s ease-in;
+}
+
+.container {
+    max-width: 850px;
+    width: 90%; /* Garante que funcione bem em telas menores */
+    text-align: center;
+}
+
+.container__informacoes {
+    background-color: rgba(54, 54, 90, 0.5);
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(150, 100, 255, 0.4);
+    animation: fadeInUp 1s ease-out;
+    margin-top: 2.5rem; /* Adicionado para criar um espaço entre o texto e a caixa */
+}
+
+.container__texto {
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.68em;
+    margin-bottom: 1.5rem;
+    color: #a78bfa;
+    line-height: 1.2;
+    font-weight: 800;
+    text-shadow:
+        2px 2px 4px rgba(151, 148, 148, 0.6),
+        4px 4px 8px rgba(138, 135, 135, 0.3);
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #d8b4fe;
+    text-align: center;
+    font-weight: 400;
+    text-shadow:
+        2px 2px 4px rgba(151, 148, 148, 0.6),
+        4px 4px 8px rgba(138, 135, 135, 0.3);
+}
+
+input[type="number"] {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #3f2a57;
+    background-color: #0d0814;
+    color: #f3e8ff;
+    font-size: 1.2rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #a78bfa;
+}
+
+.chute.container__botoes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    padding: 0.9rem 3rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+button#chutar {
+    background-color: #6d28d9;
+    color: #ffffff;
+    box-shadow: 0 0 10px #7c3aed;
+}
+
+button#chutar:hover {
+    background-color: #7e22ce;
+    box-shadow: 0 0 15px #a78bfa;
+    transform: scale(1.05);
+}
+
+button#reiniciar {
+    background-color: #4c3575;
+    color: #f3e8ff;
+}
+
+button#reiniciar:hover {
+    background-color: #3f2a57;
+    transform: scale(1.05);
+}
